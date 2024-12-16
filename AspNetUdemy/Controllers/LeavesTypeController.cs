@@ -12,6 +12,7 @@ using AutoMapper;
 
 namespace AspNetUdemy.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class LeavesTypeController(ILeaveTypesService leaveTypesService) : Controller
     {
    
