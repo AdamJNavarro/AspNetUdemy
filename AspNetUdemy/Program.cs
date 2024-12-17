@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AspNetUdemy.Data;
 using AspNetUdemy.Services;
+using AspNetUdemy.Services.Email;
+using AspNetUdemy.Services.LeaveAllocations;
+using AspNetUdemy.Services.LeaveTypes;
 
 var builder = WebApplication.CreateBuilder(args);
 // var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
@@ -19,6 +22,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddScoped<ILeaveTypesService, LeaveTypesService>();
+builder.Services.AddScoped<ILeaveAllocationsService, LeaveAllocationsService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

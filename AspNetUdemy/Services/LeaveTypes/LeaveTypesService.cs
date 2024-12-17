@@ -1,9 +1,8 @@
-using AspNetUdemy.Data;
 using AspNetUdemy.Models.LeaveTypes;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
-namespace AspNetUdemy.Services;
+namespace AspNetUdemy.Services.LeaveTypes;
 
 public class LeaveTypesService : ILeaveTypesService
 {

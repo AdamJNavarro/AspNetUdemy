@@ -1,5 +1,6 @@
 using System.Net.Mail;
-namespace AspNetUdemy.Services;
+
+namespace AspNetUdemy.Services.Email;
 
 public class EmailSender(IConfiguration _configuration) : IEmailSender
 {

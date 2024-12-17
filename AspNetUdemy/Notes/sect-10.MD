@@ -10,7 +10,7 @@
 # The Repository Pattern
 
 - used to abstract data access
-- typically used within the `Service Layer` to handle data retreival and 
+- typically used within the `Service Layer` to handle data retrieval and 
   persistence
 - All data-related operations are hidden from other layers
 - Each repository is only responsible for a single model/table
@@ -38,12 +38,14 @@ There are 3 different types to register a service.
 
 # Transient
 
-Services are created each time they are requested. Best for lightweight and 
-stateless services. (Ex: API socket to make API calls)
+Services are created each time they are requested. Meaning each dependency 
+resolved will have its own unique instance.
+
+Best for lightweight and stateless services. (Ex: API socket to make API calls)
 
 # Scoped
 
-Services are created once per request.
+Services are created once per scope or logical operation.
 
 # Singleton
 

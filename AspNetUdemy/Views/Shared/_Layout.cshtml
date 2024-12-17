@@ -27,9 +27,16 @@
                     </li>
                     @if (User.IsInRole(Roles.Administrator))
                     {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="LeavesType" asp-action="Index">LeaveTypes</a>
-                        </li>     
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Management
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-controller="LeavesType" asp-action="Index">Leave Types</a></li>
+                                <li><a class="dropdown-item" asp-controller="Periods" asp-action="Index">Periods</a></li>
+                                <li><a class="dropdown-item" asp-controller="LeaveAllocation" asp-action="Index">View Employees</a></li>
+                            </ul>
+                        </li>
                     }
                    
                 </ul>

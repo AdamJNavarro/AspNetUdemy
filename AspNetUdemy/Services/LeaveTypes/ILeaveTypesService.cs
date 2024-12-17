@@ -1,6 +1,6 @@
 using AspNetUdemy.Models.LeaveTypes;
 
-namespace AspNetUdemy.Services;
+namespace AspNetUdemy.Services.LeaveTypes;
 
 public interface ILeaveTypesService
 {
